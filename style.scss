@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: space-between;
+    font-family: 'Lato', sans-serif;
 }
 
 .game {
@@ -23,6 +24,7 @@ body {
     margin: 10px auto;
     width: 1200px;
     text-align: center;
+    font-size: 0;
 }
 
 .game-letter {
@@ -32,7 +34,6 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     font-size: 2rem;
-    font-family: sans-serif;
     color: #444;
     text-align: center;
     display: inline-flex;
@@ -46,8 +47,65 @@ body {
         text-shadow: none;
         cursor: default;
     }
-    &:not(.game-letter:disabled):hover {
+    &:not(:disabled):hover {
         background: #f15c5c;
         color: #fff;
     }
+}
+
+.game-sentence {
+    width: 100%;
+    text-align: center;
+    border: 2px solid #f15c5c;
+}
+.game-sentence-box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+    color: #333;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    margin: 1rem 0.5rem 2rem;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+.game-sentence-box-space {
+    bottom: 0;
+    background-color: none;
+    box-shadow: none;
+}
+
+.game-attempts {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+button.button,
+input[type='button'].button,
+input[type='submit'].button {
+    display: block;
+    padding: 0.8em 3em;
+    background: #f15c5c;
+    color: #fff;
+    border: 0;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    transition: 0.5s background-color, 0.5s box-shadow;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 3rem auto 1rem;
 }
